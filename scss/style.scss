@@ -1,0 +1,98 @@
+$bg-color: #333;
+$font-color: #fff;
+$primary-color: #008ed6;
+$dark-overlay: rgba(0, 0, 0, 0.7); // black with some transparency
+$landing-icon-size:30px;
+
+
+
+// GLOBAL
+body {
+  background: $bg-color;
+  color: $font-color;
+}
+
+
+
+// NAVBAR
+.navbar {
+  border-bottom: $primary-color 3px solid;
+  opacity: 0.8; // we want the navbar to be a little bit see-through
+}
+
+
+
+// HOME SECTION (nesting: any elements that are in the home-section we're going to put inside of here)
+#home-section {
+  background: url('../img/home.jpg') no-repeat center top fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh; // 700px
+
+  .dark-overlay {
+    background-color: $dark-overlay;
+    position: absolute; // we need this to cover the entire thing
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh; // 700px
+  }
+
+  .home-inner {
+    padding-top: 200px; // to bring the content down a bit
+  }
+
+  .card-form {
+    opacity: 0.8; // to make the form a little transparent
+  }
+
+  .fa {
+    color: $primary-color;
+    background: #fff;
+    padding: 4px;
+    border-radius: 5px; // to make it a little rounded
+    font-size: $landing-icon-size;
+  }
+}
+
+
+
+// EXPLORE SECTION
+#explore-section, #share-section {
+  .fa {
+    color:#fff;
+    background: #333;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: $landing-icon-size;
+  }
+}
+
+
+
+// CREATE SECTION
+#create-section {
+  .fa {
+    color: $primary-color;
+    background: #fff;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: $landing-icon-size;
+  }
+}
+
+
+
+// MODAL
+.modal {
+  color: #333;
+}
+
+
+
+// MEDIA QUERIES
+@media(max-width:576px) {
+  nav .container{
+    width: 100%; // so the hamburger icon won't overlay the navbrand
+  }
+}
